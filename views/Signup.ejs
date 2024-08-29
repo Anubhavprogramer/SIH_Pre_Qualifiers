@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styleSheets/styles.css">
+    <link rel="stylesheet" href="../styleSheets/BassicCss.css">
+</head>
+<body>
+    <div class="h-screen bg-primary flex justify-center items-center font-Hedon_Regular">
+        <div class="h-[80%] w-[80%] bg-secondary flex justify-start items-center flex-col">
+            <header>
+                <span class="text-[74px] font-semibold">Sign up</span>
+            </header>
+            <div>
+                <form action="" class="flex flex-col justify-center items-center">
+                    <div class="flex flex-col gap-[4px]">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" placeholder="Email" class="w-[350px] h-[50px] p-2 rounded-xl bg-inputSection shadow-custom">
+                    </div>
+                    <div class="flex flex-col gap-[4px]">
+                        <label for="password">Password</label>
+                        <input name="password" type="password" placeholder="Password" class="w-[350px] h-[50px] p-2 rounded-xl bg-inputSection shadow-custom">
+                    </div>
+                    <div class="flex flex-col gap-[4px]">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input name="confirm-password" type="password" placeholder="Confirm Password" class="w-[350px] p-2 h-[50px] rounded-xl bg-inputSection shadow-custom">
+                    </div>
+                    <div class="flex flex-col gap-[4px]">
+                        <label for="dob">Date of Birth</label>
+                        <input name="dob" type="date" class="w-[350px] h-[50px] rounded-xl p-2 bg-inputSection shadow-custom">
+                    </div>
+                    <div class="flex flex-col gap-[4px]">
+                        <label for="role">Role</label>
+                        <select name="role" placeholder="Select role" class="w-[350px] h-[50px] rounded-xl bg-inputSection shadow-custom">
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">Candidate</option>
+                            <option value="moderator">Interviewer</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center  gap-2 mt-2">
+                        <input type="checkbox" name="terms&condition" id="terms" class="h-3 w-3">
+                        <label for="terms" class="text-gray-700 text-[15px]">I accept all the <a href="#" class="text-blue-500 underline">Terms and Conditions</a></label>
+                    </div>                    
+
+                    <input type="submit" value="Sign up" class="px-5 w-1/2 text-white rounded-xl py-3 bg-primary">
+                    <span class="p-3">Already Have an account? <a href="#" class="text-blue-500 underline">Login</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
