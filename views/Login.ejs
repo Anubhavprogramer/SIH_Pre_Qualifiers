@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styleSheets/styles.css">
+    <link rel="stylesheet" href="../styleSheets/BassicCss.css">
+</head>
+<body>
+    <div class="h-screen bg-primary flex justify-center items-center font-Hedon_Regular">
+        <div class="h-[80%] w-[80%] bg-secondary flex justify-center gap-10 items-center flex-col">
+            <header>
+                <span class="text-[74px] font-semibold">Login</span>
+            </header>
+            <div>
+                <form action="" class="flex flex-col justify-center items-center">
+                    <div class="flex flex-col gap-[4px]">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" placeholder="Email" class="w-[350px] h-[50px] p-2 rounded-xl bg-inputSection shadow-custom">
+                    </div>
+                    <div class="flex flex-col gap-[4px]">
+                        <label for="password">Password</label>
+                        <input name="password" type="password" placeholder="Password" class="w-[350px] h-[50px] p-2 rounded-xl bg-inputSection shadow-custom">
+                    </div>
+                    
+                    <div class="flex items-center justify-end w-[350px] gap-2 mt-2">
+                        <a href="#" class="text-blue-600" >Fogot Password?</a>
+                    </div>                    
+
+                    <input type="submit" value="Sign up" class="px-5 w-1/2 text-white rounded-xl py-3 mt-10 bg-primary">
+                    <span class="p-3">Already Have an account? <a href="#" class="text-blue-500 underline">Login</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

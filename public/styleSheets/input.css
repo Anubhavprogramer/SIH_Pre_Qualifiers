@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Hedon_Regular;
+    src: url('.../fonts/Hedon_Regular.otf');
+}
+
+
 /* src/tailwind.css */
 @tailwind base;
 @tailwind components;
