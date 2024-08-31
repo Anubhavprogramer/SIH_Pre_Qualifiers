@@ -19,6 +19,22 @@ app.get('/Candidate',(req,res)=>{
 app.get('/Candidate/NoInterview',(req,res)=>{
     res.render('candidate_not_in_interview');
 })
+app.get('/Candidate/Interview',(req,res)=>{
+    res.render('cnadidate_Interview');
+})
+app.get('/Candidate/scoreCard',(req,res)=>{
+    res.render('Candidate_scoreCard');
+})
+app.get('/Candidate/me',(req,res)=>{
+    res.render('Candidate_update');
+})
+
+app.get('/Interviewer',(req,res)=>{
+    res.render('Interviewer');
+})
+app.get('/Interviewer/me',(req,res)=>{
+    res.render('Interviewer');
+})
 
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000');
