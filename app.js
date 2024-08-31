@@ -32,8 +32,11 @@ app.get('/Candidate/me',(req,res)=>{
 app.get('/Interviewer',(req,res)=>{
     res.render('Interviewer');
 })
+app.get('/Interviewer/interview',(req,res)=>{
+    res.render('Interviewer_interview_window');
+})
 app.get('/Interviewer/me',(req,res)=>{
-    res.render('Interviewer');
+    res.render('Interviewer_update');
 })
 
 app.listen(3000, ()=>{
