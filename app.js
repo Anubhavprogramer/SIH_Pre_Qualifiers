@@ -39,6 +39,20 @@ app.get('/Interviewer/me',(req,res)=>{
     res.render('Interviewer_update');
 })
 
+
+app.get('/admain/AssignInterview',(req,res)=>{
+    res.render('PlanTheInterview');
+})
+app.get('/admain/Candidate',(req,res)=>{
+    res.render('candidatePortal');
+})
+app.get('/admain/Interviewer',(req,res)=>{
+    res.render('InterviewerPortal');
+})
+app.get('/admain/Questions',(req,res)=>{
+    res.render('QuestionsPortal');
+})
+
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000');
 });
