@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styleSheets/styles.css">
+    <link rel="stylesheet" href="../styleSheets/BassicCss.css">
+    <title>Profile Page</title>
+</head>
+
+<body class="bg-panel font-sans antialiased">
+    <div class="flex h-screen">
+        <!-- Left Side Panel -->
+        <div
+            class="left_side_panel flex flex-col gap-6 justify-center items-center bg-gradient-to-b from-gradientUp to-gradientDown w-1/4 p-6">
+            <div
+                class="profile_picture h-48 w-48 bg-zinc-300 rounded-full border-4 border-details shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="https://i.pinimg.com/564x/0f/e9/cf/0fe9cfef04566108834cc6f4a09167ff.jpg" alt="profile picture"
+                    class="w-full h-full object-cover rounded-full">
+            </div>
+
+            <div class="details w-[85%] h-auto flex p-7 items-center flex-col bg-details rounded-lg shadow-md">
+                <span class="font-semibold text-lg mb-2">Interviewer</span>
+                <span class="font-medium text-sm text-gray-600">interviewer@gmail.com</span>
+                <span class="font-medium text-sm text-gray-600">+91 1234567890</span>
+                <span class="font-medium text-sm text-gray-600">Software Development</span>
+                <span class="font-medium text-sm text-gray-600 mb-4">Mid-level</span>
+                <div class="w-full flex flex-col mb-4">
+                    <span class="text-sm font-normal text-gray-700">Experience of about 10 Years</span>
+                    <span class="text-sm font-normal text-gray-700">JavaScript</span>
+                    <span class="text-sm font-normal text-gray-700">React</span>
+                    <span class="text-sm font-normal text-gray-700">Node.js</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Panel -->
+        <div class="right_side_panel flex flex-col justify-center items-center w-3/4 p-10 relative">
+            <button
+                class="w-40 h-10 bg-gradient-to-b from-gradientUp to-gradientDown text-white font-semibold rounded-lg shadow-md absolute top-6 right-6 hover:shadow-lg transition-shadow duration-300">
+                Logout
+            </button>
+
+            <div class="box bg-details w-full max-w-3xl p-8 rounded-lg shadow-lg">
+                <div class="block_1 flex flex-col font-semibold items-center text-center mb-6">
+                    <span class="text-xl mb-2">Your Scheduled Interview for Date</span>
+                    <input type="date" class="p-2 rounded-lg bg-inputSection">
+                </div>
+
+                <div class="block_2 flex flex-col gap-4">
+                    <!-- Card 1 -->
+                    <div
+                        class="card flex justify-between items-center p-4 bg-gray-800 rounded-lg shadow-md text-white">
+                        <span class="text-lg font-semibold">Name of Candidate</span>
+                        <span class="text-sm text-gray-400">Timing: 10:00 AM - 11:00 AM</span>
+                        <span class="text-sm text-gray-400">Skills: JavaScript, React</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300">
+                                Start
+                            </button>
+                            <button
+                                class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition-colors duration-300">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="card flex justify-between items-center p-4 bg-gray-800 rounded-lg shadow-md text-white">
+                        <span class="text-lg font-semibold">Name of Candidate</span>
+                        <span class="text-sm text-gray-400">Timing: 11:30 AM - 12:30 PM</span>
+                        <span class="text-sm text-gray-400">Skills: Node.js, Express</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300">
+                                Start
+                            </button>
+                            <button
+                                class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition-colors duration-300">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="card flex justify-between items-center p-4 bg-gray-800 rounded-lg shadow-md text-white">
+                        <span class="text-lg font-semibold">Name of Candidate</span>
+                        <span class="text-sm text-gray-400">Timing: 2:00 PM - 3:00 PM</span>
+                        <span class="text-sm text-gray-400">Skills: Python, Django</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300">
+                                Start
+                            </button>
+                            <button
+                                class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition-colors duration-300">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

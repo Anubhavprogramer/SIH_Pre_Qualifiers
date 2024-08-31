@@ -11,6 +11,8 @@ module.exports = {
         details: '#FFFEF0',
         gradientUp: '#39A7F2',
         gradientDown: '#1C4982',
+        inputSection: '#F3D7F3',
+        logoutBtn: '#03967F',
 
       },
       boxShadow: {

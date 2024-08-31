@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styleSheets/styles.css">
+    <link rel="stylesheet" href="../styleSheets/BassicCss.css">
+    <title>Score Card</title>
+</head>
+<body class="bg-panel font-sans antialiased">
+    <div class="flex h-screen">
+        <!-- Left Side Panel -->
+        <div class="left_side_panel flex flex-col gap-6 justify-center items-center bg-gradient-to-b from-gradientUp to-gradientDown w-1/4 p-6">
+            <div class="profile_picture h-48 w-48 bg-zinc-300 rounded-full border-4 border-details shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="https://i.pinimg.com/564x/0f/e9/cf/0fe9cfef04566108834cc6f4a09167ff.jpg" alt="profile picture" class="w-full h-full object-cover rounded-full">
+            </div>            
+
+            <div class="details w-[85%] h-auto flex p-7 items-center flex-col bg-details rounded-lg shadow-md">
+                <span class="font-semibold text-lg mb-2">interviewer</span>
+                <span class="font-medium text-sm text-gray-600">interviewer@gmail.com</span>
+                <span class="font-medium text-sm text-gray-600">+91 1234567890</span>
+                <span class="font-medium text-sm text-gray-600">Software Development</span>
+                <span class="font-medium text-sm text-gray-600 mb-4">Mid-level</span>
+                <div class="w-full flex flex-col mb-4">
+                    <span class="text-sm font-normal text-gray-700">B.Tech in Computer Science</span>
+                    <span class="text-sm font-normal text-gray-700">JavaScript</span>
+                    <span class="text-sm font-normal text-gray-700">React</span>
+                    <span class="text-sm font-normal text-gray-700">Node.js</span>
+                </div>
+                <div class="w-full flex flex-col space-y-2">
+                    <span><a class="text-sm font-normal text-blue-600 hover:underline" href="#">Resume</a></span>
+                    <span><a class="text-sm font-normal text-blue-600 hover:underline" href="#">Portfolio</a></span>
+                    <span><a class="text-sm font-normal text-blue-600 hover:underline" href="#">Project-1</a></span>
+                    <span><a class="text-sm font-normal text-blue-600 hover:underline" href="#">Project-2</a></span>
+                    <span><a class="text-sm font-normal text-blue-600 hover:underline" href="#">Project-3</a></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Side Panel -->
+        <div class="right_side_panel flex flex-col justify-center items-center w-3/4 p-10 relative">
+            <button class="w-40 h-10 bg-gradient-to-b from-gradientUp to-gradientDown text-white font-semibold rounded-lg shadow-md absolute top-6 right-6 hover:shadow-lg transition-shadow duration-300">
+                Logout
+            </button>
+
+            <div class="box bg-details w-full max-w-3xl p-8 rounded-lg shadow-lg">
+                <div class="block_1 flex flex-col font-semibold items-center text-center mb-6">
+                    <span class="text-2xl mb-2">Hi, interviewer Update Your Profile!!</span>
+                </div>
+                <form action="" class="flex flex-col gap-2 ">
+                    <input type="text" name="" class="w-full bg-inputSection rounded-lg p-2 select-none" placeholder="Name" id="">
+                    <input type="text" name="Email" class="w-full bg-inputSection rounded-lg p-2 select-none" placeholder="Email" id="">
+                    <input type="text" name="PhoneNumber" class="w-full bg-inputSection rounded-lg p-2 select-none" placeholder="Phone Number" id="">
+                    <input type="text" name="Department" class="w-full bg-inputSection rounded-lg p-2 select-none" placeholder="Department" id="">
+                    <input type="text" name="Experience" class="w-full bg-inputSection rounded-lg p-2 select-none" placeholder="Experience" id="">
+                    <input type="text" name="Skills" class="w-full bg-inputSection rounded-lg p-2 select-none" placeholder="Skills" id="">
+
+                    <div class="w-full h-20 flex flex-col justify-center items-end relative">
+                        <input type="submit" class="w-32 rounded-lg absolute right-0 bottom-0 h-12 bg-yellow-500 text-black font-semibold" value="Update Profile">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
