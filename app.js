@@ -1,23 +1,21 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./db');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const authrouter = require('./routes/AuthRoute.js');
 
 require('dotenv').config();
 connectDB();
 
-
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'/public')));
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use(cookieParser());
 
-
-app.get('/signup',(req, res)=>{
-    res.render('Signup');
-});
-
-app.get('/login',(req,res)=>{
-    res.render('Login');
-})
-
+app.use('/',authrouter);
+// Candidate Routes
 app.get('/Candidate',(req,res)=>{
     res.render('candidate_interviewnot scheduled');
 })
@@ -33,7 +31,7 @@ app.get('/Candidate/scoreCard',(req,res)=>{
 app.get('/Candidate/me',(req,res)=>{
     res.render('Candidate_update');
 })
-
+// Interviewer Routes
 app.get('/Interviewer',(req,res)=>{
     res.render('Interviewer');
 })
@@ -44,7 +42,7 @@ app.get('/Interviewer/me',(req,res)=>{
     res.render('Interviewer_update');
 })
 
-
+// admin Routes
 app.get('/admain/AssignInterview',(req,res)=>{
     res.render('PlanTheInterview');
 })
@@ -54,11 +52,16 @@ app.get('/admain/Candidate',(req,res)=>{
 app.get('/admain/Interviewer',(req,res)=>{
     res.render('InterviewerPortal');
 })
+
+// Question Routes
 app.get('/admain/Questions',(req,res)=>{
-    res.render('QuestionsPortal');
+res.render('QuestionsPortal');
 })
 
-app.listen(3000, ()=>{
-    console.log('Server is running on port 3000');
+
+// ScoreCard Routes
+
+app.listen(process.env.PORT, ()=>{
+    console.log(`Server is running on port ${process.env.PORT}`);
 });
 
