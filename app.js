@@ -1,5 +1,10 @@
 const express = require('express');
 const app = express();
+const connectDB = require('./db');
+
+require('dotenv').config();
+connectDB();
+
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
