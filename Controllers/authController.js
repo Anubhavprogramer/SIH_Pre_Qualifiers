@@ -1,10 +1,10 @@
 const asyncHandler = require("../middlewares/asyncHandler");
 
-const loginUser = asyncHandler(async (req, res) => {
+const loginUser = asyncHandler( (req, res) => {
     res.render('Login');
 });
 
-const signupUser = asyncHandler(async (req, res) => {
+const signupUser = asyncHandler( (req, res) => {
     res.render('Signup');
 });
 
