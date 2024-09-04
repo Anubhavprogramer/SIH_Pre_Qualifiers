@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const CandidateSchema = new mongoose.Schema({
     email: {
+        unique: true,
         type: String,
         required: true,
         min: 6,
@@ -11,7 +12,8 @@ const CandidateSchema = new mongoose.Schema({
         type: String,
         required: true,
         min: 6,
-        max: 1024
+        max: 1024,
+        select: false
     },
     dateOfBirth:{
         type:Date,
@@ -69,6 +71,31 @@ const CandidateSchema = new mongoose.Schema({
 
 });
 
+CandidateSchema.pre('save', async function(next){
+    if(!this.isModified('password')){
+        return next();
+    }
+    try{
+        if(this.isCCModified('password')){
+            this.password = await bcrypt.hash(this.password, 10);
+        }
+
+        next();
+    }
+    catch(error){
+        next(error);
+    }
+});
+
+CandidateSchema.methods.comparePassword = async function(password){
+    return await bcrypt.compare(password, this.password);
+}
+
+CandidateSchema.methods.getResetPasswordToken = function(){
+    // we will do it later
+};
+
+
 const Candidate = mongoose.model('Candidate', CandidateSchema);
 
-export default Candidate;
+module.exports = Candidate;
