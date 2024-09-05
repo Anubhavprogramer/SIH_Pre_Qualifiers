@@ -16,8 +16,7 @@ const CandidateSchema = new mongoose.Schema({
         select: false
     },
     dateOfBirth:{
-        type:Date,
-        required:true
+        type:Date
     },
     role:{
         type:String,
@@ -70,31 +69,6 @@ const CandidateSchema = new mongoose.Schema({
     
 
 });
-
-CandidateSchema.pre('save', async function(next){
-    if(!this.isModified('password')){
-        return next();
-    }
-    try{
-        if(this.isCCModified('password')){
-            this.password = await bcrypt.hash(this.password, 10);
-        }
-
-        next();
-    }
-    catch(error){
-        next(error);
-    }
-});
-
-CandidateSchema.methods.comparePassword = async function(password){
-    return await bcrypt.compare(password, this.password);
-}
-
-CandidateSchema.methods.getResetPasswordToken = function(){
-    // we will do it later
-};
-
 
 const Candidate = mongoose.model('Candidate', CandidateSchema);
 
