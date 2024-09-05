@@ -1,38 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="../styleSheets/styles.css">
     <link rel="stylesheet" href="../styleSheets/BassicCss.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Hedon_Regular', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Buttons styling */
+        .button-primary {
+            width: 160px;
+            height: 40px;
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 16px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .button-primary:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Central container */
+        .container {
+            height: 80vh;
+            width: 80vw;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+        }
+
+        header span {
+            font-size: 64px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        form input[type="email"],
+        form input[type="password"] {
+            width: 350px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        form input[type="email"]:focus,
+        form input[type="password"]:focus {
+            border-color: #6a11cb;
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.2);
+            outline: none;
+        }
+
+        /* Submit button */
+        form input[type="submit"] {
+            width: 50%;
+            padding: 12px 0;
+            color: #fff;
+            background-color: #2575fc;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #1e63d9;
+        }
+
+        /* Forgot password link */
+        .forgot-password {
+            text-align: right;
+            width: 100%;
+            margin-top: -10px;
+        }
+
+        .forgot-password a {
+            color: #2575fc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sign up link */
+        .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
     <div class="h-screen bg-primary flex justify-center items-center font-Hedon_Regular">
-        <div class="h-[80%] w-[80%] bg-secondary flex justify-center gap-10 items-center flex-col">
+        <!-- Top right buttons -->
+        <button class="button-primary right-6">
+            <a href="/Interviewer" style="text-decoration: none; color: white;">Interviewer Login</a>
+        </button>
+        <button class="button-primary left-6">
+            <a href="/Admin/CreateTheInterview" style="text-decoration: none; color: white;">Admin</a>
+        </button>
+
+        <!-- Central login form container -->
+        <div class="container">
             <header>
-                <span class="text-[74px] font-semibold">Login</span>
+                <span>Login</span>
             </header>
             <div>
-                <form action="" class="flex flex-col justify-center items-center">
-                    <div class="flex flex-col gap-[4px]">
+                <form action="/Candidate/" method="POST">
+                    <div class="flex flex-col gap-2">
                         <label for="email">Email</label>
-                        <input name="email" type="email" placeholder="Email" class="w-[350px] h-[50px] p-2 rounded-xl bg-inputSection shadow-custom">
+                        <input name="email" type="email" placeholder="Enter your email" required>
                     </div>
-                    <div class="flex flex-col gap-[4px]">
+                    <div class="flex flex-col gap-2">
                         <label for="password">Password</label>
-                        <input name="password" type="password" placeholder="Password"  class="w-[350px] h-[50px] p-2 rounded-xl bg-inputSection shadow-custom">
+                        <input name="password" type="password" placeholder="Enter your password" required>
                     </div>
-                    
-                    <div class="flex items-center justify-end w-[350px] gap-2 mt-2">
-                        <a href="#" class="text-blue-600" >Fogot Password?</a>
-                    </div>                    
 
-                    <input type="submit" value="Login" class="px-5 w-1/2 text-white rounded-xl py-3 mt-10 bg-primary">
-                    <span class="p-3">Already Have an account? <a href="/Signup" class="text-blue-500 underline">Sign up</a></span>
+                    <div class="forgot-password">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <input type="submit" value="Login">
+                    <div class="signup-link">
+                        Don't have an account? <a href="/Signup">Sign up</a>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
+
 </html>

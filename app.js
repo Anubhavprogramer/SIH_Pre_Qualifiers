@@ -11,7 +11,7 @@ const AdminRouter = require('./routes/adminRoutes.js');
 const scoreCardRouter = require('./routes/ScoreCardRoutes.js');
 
 require('dotenv').config();
-connectDB();
+connectDB(); 
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname,'/public')));

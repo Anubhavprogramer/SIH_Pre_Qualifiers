@@ -9,23 +9,35 @@
 <body>
     <home class="h-screen bg-details flex">
         <nav class="h-screen w-16 flex gap-5 flex-col items-center p-5 bg-primary shadow-lg">
-            <div class="w-8 h-8 ">
-                <img src="../Assets/PlanTheInterview.png" alt="">
+            <!-- Plan The Interview Link -->
+            <div class="w-8 h-8">
+                <a href="/Admin/CreateTheInterview">
+                    <img src="../Assets/PlanTheInterview.png" alt="Plan The Interview">
+                </a>
             </div>
-            <div class="w-8 h-8 ">
-                <img src="../Assets/Candidate.png" alt="">
+            <!-- Candidate Link -->
+            <div class="w-8 h-8">
+                <a href="/Admin/getAllApplicant">
+                    <img src="../Assets/Candidate.png" alt="Candidate">
+                </a>
             </div>
-            <div class="w-8 h-8 ">
-                <img src="../Assets/Interviewer.png" alt="">
+            <!-- Interviewer Link -->
+            <div class="w-8 h-8">
+                <a href="/Admin/GetAllInterview">
+                    <img src="../Assets/Interviewer.png" alt="Interviewer">
+                </a>
             </div>
-            <div class="w-8 h-8 ">
-                <img src="../Assets/Questions.png" alt="">
+            <!-- Questions Link -->
+            <div class="w-8 h-8">
+                <a href="/Admin/getAllQuestion">
+                    <img src="../Assets/Questions.png" alt="Questions">
+                </a>
             </div>
         </nav>
         <div class="h-screen w-full relative flex justify-center items-center">
             <div class="Logout absolute bg-secondary top-5 right-5">
                 <button class="h-12 w-32 bg-logoutBtn text-white rounded-lg shadow-lg">
-                    Logout
+                    <a href="/">Logout</a>
                 </button>
             </div>
             <span class=" absolute top-5 right-1/2 translate-x-1/2 text-5xl font-semibold">
